@@ -1,0 +1,4 @@
+Tips:
+1. If you need to run the second part of the code, first you need to install node.js. 
+2. Then enter the run command: node app.js
+3. Finally use this port number for access: Http://localhost:3000

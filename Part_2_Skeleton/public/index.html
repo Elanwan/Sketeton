@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"
+  >
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim"
+    crossorigin="anonymous"
+  ></script>
+  <link href="index.css" rel="stylesheet">
+</head>
+<body>
+<div id="login" class="hide form">
+
+  <main class="form-signin w-100 m-auto">
+    <div>
+      <h1 class="h3 mb-3 fw-normal">Login</h1>
+
+      <div class="form-floating">
+        <input
+          name="email"
+          required
+          type="email"
+          class="form-control"
+          id="floatingInput"
+          placeholder="name@example.com"
+        >
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input
+          name="password"
+          required
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Password"
+        >
+        <label for="floatingPassword">Password</label>
+      </div>
+
+      <button class="w-100 btn btn-lg btn-primary" onclick="handleLogin()">Login</button>
+      <button class="w-100 btn btn-lg btn-link" onclick="toSignup()">to sign up</button>
+
+    </div>
+  </main>
+
+</div>
+<div id="signUp" class="hide form">
+
+  <main class="form-signin w-100 m-auto">
+    <div>
+      <h1 class="h3 mb-3 fw-normal">Sign up</h1>
+      <div class="form-floating">
+        <input name="firstName" required class="form-control" id="floatingInputSignFirst">
+        <label for="floatingInputSignFirst">First Name</label>
+      </div>
+      <div class="form-floating">
+        <input name="lastName" required class="form-control" id="floatingInputSignLast">
+        <label for="floatingInputSignLast">Last Name</label>
+      </div>
+      <div class="form-floating">
+        <input
+          name="email"
+          required
+          type="email"
+          class="form-control"
+          id="floatingInputSign"
+          placeholder="name@example.com"
+        >
+        <label for="floatingInputSign">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input
+          name="password"
+          required
+          type="password"
+          class="form-control"
+          id="floatingPasswordSign"
+          placeholder="Password"
+        >
+        <label for="floatingPasswordSign">Password</label>
+      </div>
+
+      <button class="w-100 btn btn-lg btn-primary" onclick="handleSignup()">Sign Up</button>
+      <button class="w-100 btn btn-lg btn-link" onclick="toLogin()">to login</button>
+
+    </div>
+  </main>
+
+</div>
+<div class="container hide" id="container">
+  <div class="row">
+    <div class="col">
+      <div class="list-group list-group-radio d-grid gap-2 border-0 w-auto" id="colUser"></div>
+      <nav id="paginationNav"></nav>
+    </div>
+    <div class="col">
+      <div class="list-group list-group-checkable d-grid gap-2 border-0 w-auto" id="colPost"></div>
+    </div>
+    <div class="col-6">
+      <div id="content"></div>
+      <div id="comments">
+
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+<script src="index.js"></script>
+
+</html>
